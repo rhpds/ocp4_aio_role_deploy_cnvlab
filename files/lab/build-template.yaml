@@ -16,9 +16,9 @@ parameters:
     value: bookbag
   - name: BUILDER_IMAGE
     required: true
-    value: quay.io/hgeaydem/cnv-workbook:latest
+    value: quay.io/agonzalezrh/mig2ocpvirt-bookbag:latest
   - name: GIT_REPO
-    value: https://github.com/RHFieldProductManagement/openshift-aio.git
+    value: https://github.com/agonzalezrh/ocp4_aio_role_deploy_cnvlab
 
 objects:
   - apiVersion: image.openshift.io/v1
@@ -37,7 +37,7 @@ objects:
           name: ${NAME}:latest
       source:
         git:
-          ref: master
+          ref: main
           uri: ${GIT_REPO}
         type: Git
       strategy:
