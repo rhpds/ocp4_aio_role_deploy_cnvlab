@@ -28,9 +28,8 @@
  
 - name: Clone OpenShift virt repositories
   git:
-    repo: "https://github.com/RHFieldProductManagement/ocp4_aio_role_deploy_cnvlab.git"
+    repo: "https://github.com/agonzalezrh/ocp4_aio_role_deploy_cnvlab.git"
     dest: "/root/cnvlab"
-    version: "v0.0.11"
 
 - name: Deploy Workbook Instance for CNV Labs
   block:
@@ -123,4 +122,4 @@
 
 - name: Print CNV Lab Workbook Route
   debug:
-    msg: "OpenShift Virtualization Lab Workbook: https://{{ getroute.resources[0].spec.host }}"
+    msg: "OpenShift Virtualization Lab Workbook: http://{{ getroute.resources[0].spec.host }}"
