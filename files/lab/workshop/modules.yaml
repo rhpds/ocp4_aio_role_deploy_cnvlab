@@ -13,24 +13,24 @@ config:
 modules:
     welcome:
         name: Welcome
-        exit_sign: Install Operator
+        exit_sign: Review Environment
     install-operator:
-        name: Install Operator
-        exit_sign: Creation and Administration of VMs
+        name: Review Environment
+        exit_sign: OpenShift Virtualization basics
     introduction-vms:
-        name: Creation and Administration of VMs
+        name: OpenShift Virtualization basics
         exit_sign: Virtual Machine Customization
     introduction-customization:
         name: Virtual Machine Customization
-        exit_sign: Pod and Virtual Machine Migration
+        exit_sign: Pod Review and Virtual Machine Migration
     pods-review:
-        name: Pod and Virtual Machine Migration
+        name: Pod Review and Virtual Machine Migration
         exit_sign: Network Attachment
     network-attachment:
         name: Network Attachment
-        exit_sign: Migration Toolkit Virtualization
+        exit_sign: Migrating Virtual Machines
     mtv:
-        name: Migration Toolkit Virtualization
+        name: Migrating Virtual Machines
         exit_sign: thanks
     thanks:
         name: Thanks
