@@ -45,7 +45,7 @@
 
   - name: Create the latest tag
     shell: >-
-      oc tag quay.io/hgeaydem/cnv-workbook:latest cnv:latest
+      oc tag quay.io/agonzalezrh/cnv-workbook:latest cnv:latest
     register: tag_success
     retries: 3
     delay: 30
@@ -53,7 +53,7 @@
 
   - name: Create the latest tag (namespaced)
     shell: >-
-      oc tag quay.io/hgeaydem/cnv-workbook:latest cnv:latest -n workbook
+      oc tag quay.io/agonzalezrh/cnv-workbook:latest cnv:latest -n workbook
     register: tag_success
     retries: 3
     delay: 30
@@ -62,8 +62,8 @@
   - name: Start the build
     shell: |
       oc tag -d cnv:latest
-      oc tag quay.io/hgeaydem/cnv-workbook:latest cnv:latest
-      oc tag quay.io/hgeaydem/cnv-workbook:latest cnv:latest -n workbook
+      oc tag quay.io/agonzalezrh/cnv-workbook:latest cnv:latest
+      oc tag quay.io/agonzalezrh/cnv-workbook:latest cnv:latest -n workbook
       oc -n workbook start-build cnv --from-dir=/root/cnvlab/files/lab
     register: build_success
     retries: 10
