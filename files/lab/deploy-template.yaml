@@ -127,7 +127,7 @@ objects:
                 - name: DOWNLOAD_URL
                 - name: WORKSHOP_FILE
                 - name: CONSOLE_URL
-                  value: http://0.0.0.0:10083
+                  value: ""
                 - name: OC_VERSION
                 - name: ODO_VERSION
                 - name: KUBECTL_VERSION
