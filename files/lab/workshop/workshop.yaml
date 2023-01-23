@@ -1,26 +1,15 @@
-name: OpenShift Virtualization Labs
+name: Migrating to OpenShift Virtualization
 
 modules:
     activate:
     - welcome
-    - using-homeroom
-    - explore-openshift
-    - validation
-    - deploy-cnv
-    - storage-setup
-    - network-setup
-    - deploy-workloads
-    - live-migration
-    - cloning
-    - masquerade
-    - console
-    - templates
-    - sample-application-architecture
-    - deploy-application-components
-    - deploy-database-web
-    - deploy-database-yaml
-    - snapshot-restore
-    - hot-plug
-    - micro-segmentation
+    - install-operator
+    - introduction-vms
+    - introduction-customization
+    - pods-review
+    - network-attachment
+    - mtv    
+    - thanks
+
 
 
