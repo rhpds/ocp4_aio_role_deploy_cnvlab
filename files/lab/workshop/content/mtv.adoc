@@ -608,7 +608,6 @@ products
 
 . Stop the VM and copy the disk to be the `ocp4-bastion` node
 +
-+
 [%nowrap]
 ----
 [lab-user@hypervisor ~]$ sudo virsh shutdown legacy
