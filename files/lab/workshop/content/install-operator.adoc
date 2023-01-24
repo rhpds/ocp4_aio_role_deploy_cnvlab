@@ -47,9 +47,7 @@ If your cluster uses worker nodes with different CPUs, live migration failures c
 
 === Review Nodes and Machines
 
-. Note, if you prefer with several tabs you can press top-right three lines and press *Open Console*
-+
-image::images/Open_Console.png[]
+. Navigate to %ocp_url% and login with user `admin` and password `r3dh4t1!`.
 
 . From the navigation menu, select *Compute* -> *Nodes*:
 +
