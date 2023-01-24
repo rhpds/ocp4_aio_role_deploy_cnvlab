@@ -44,7 +44,7 @@
 
   - name: Start the build
     shell: |
-       oc -n workbook start-build cnv 
+       oc -n workbook start-build cnv  --wait=true
     register: build_success
     retries: 10
     delay: 30
