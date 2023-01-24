@@ -31,7 +31,10 @@ modules:
         exit_sign: Migrating Virtual Machines
     mtv:
         name: Migrating Virtual Machines
-        exit_sign: thanks
+        exit_sign: MTV Architecture
+    architecture:
+        name: MTV Architecture
+        exit_sign: thanks        
     thanks:
         name: Thanks
 

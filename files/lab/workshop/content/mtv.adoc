@@ -282,7 +282,7 @@ image::images/MTV/30_Migrated_VM_RHV_Console.png[]
 
 . Expose the VM using a *Service* and a *Route*
 .. Navigate to *Networking* -> *Services* and press *Create Service*
-... Fill with the following YAML replacing with your Lab GUID
+... Fill with the following YAML
 +
 [%nowrap]
 ----
@@ -328,7 +328,13 @@ Hello from VMware: I'm web02
 
 === Add VMWare Provider
 
-To use VMWare is required to generate an image with the VDDK library. 
+The *Migration Toolkit for Virtualization* (*MTV*) uses the VMware Virtual Disk Development Kit (*VDDK*) SDK to transfer virtual disks from VMware vSphere.
+
+You must download the *VMware Virtual Disk Development Kit* (*VDDK*), build a VDDK image, and push the VDDK image to your image registry. You need the VDDK init image path in order to add a VMware source provider.
+
+[IMPORTANT]
+Storing the VDDK image in a public registry might violate the VMware license terms.
+
 
 . Navigate to *Builds* -> *ImageStreams*
 . Press *Create ImageStream*
@@ -544,6 +550,9 @@ spec:
 .. *Target port*: `80 -> 80 (TCP)`
 . Press *Create*
 +
+[NOTE]
+Don't enable TLS.
++
 image::images/MTV/63_VMWARE_VMs_Create_Route.png[]
 . Navigate to the address shown in *Location* field
 +
@@ -624,7 +633,6 @@ database.qcow2                                                                  
 
 . Connect to the `ocp4-bastion` node
 +
-+
 [%nowrap]
 ----
 [lab-user@hypervisor ~]$ sudo ssh root@192.168.123.100
@@ -656,7 +664,7 @@ Already on project "vmexamples" on server "https://api.%guid%.dynamic.opentlc.co
 [%nowrap]
 ----
 NAME              HOST/PORT                                                      PATH   SERVICES          PORT    TERMINATION          WILDCARD
-cdi-uploadproxy   cdi-uploadproxy-openshift-cnv.apps.szb28.dynamic.opentlc.com          cdi-uploadproxy   <all>   reencrypt/Redirect   None
+cdi-uploadproxy   cdi-uploadproxy-openshift-cnv.apps.%guid%.dynamic.opentlc.com          cdi-uploadproxy   <all>   reencrypt/Redirect   None
 ----
 
 . Install the `virtctl` tool
