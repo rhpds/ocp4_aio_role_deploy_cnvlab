@@ -1,6 +1,5 @@
 :scrollbar:
 :toc2:
-:USER_GUID: %guid%
 
 
 =  Migration Toolkit Virtualization
@@ -290,11 +289,11 @@ image::images/MTV/30_Migrated_VM_RHV_Console.png[]
 apiVersion: v1
 kind: Service
 metadata:
-  name: webrhv-{USER_GUID}
+  name: webrhv-%guid%
   namespace: vmexamples
 spec:
   selector:
-    vm.kubevirt.io/name: webrhv-{USER_GUID}
+    vm.kubevirt.io/name: webrhv-%guid%
   ports:
     - protocol: TCP
       port: 80
@@ -303,7 +302,7 @@ spec:
 ... Press *Create*
 .. Navigate to *Networking* -> *Routes* and press *Create Route*. Fill the following information:
 ... *Name*: `route-webrhv`
-... *Service*: `webrhv-REPLACEME`
+... *Service*: `webrhv-%guid%`
 ... *Target port*: `80 -> 80 (TCP)`
 ... Press *Create*
 +
@@ -555,7 +554,7 @@ image::images/MTV/64_VMWARE_VMs_URL.png[]
 
 The last Virtual Machine to be migrated is a database running in the Hypervisor node.
 
-. Connect to the hypervisor with the user lab-user and the password (information available when the lab was ordered)
+. Connect to the hypervisor with the user lab-user and the password %password%
 +
 [%nowrap]
 ----
@@ -643,7 +642,7 @@ database.qcow2                                                                  
 +
 [%nowrap]
 ----
-Already on project "vmexamples" on server "https://api.szb28.dynamic.opentlc.com:6443".
+Already on project "vmexamples" on server "https://api.%guid%.dynamic.opentlc.com:6443".
 ----
 
 . Get the URL address for the CDI (_Container Disk Importer_)
