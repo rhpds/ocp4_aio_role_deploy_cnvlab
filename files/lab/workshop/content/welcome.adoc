@@ -8,3 +8,4 @@ This *Migration to OpenShift Virtualization* lab is organized in the following s
 * *Pod Review and Virtual Machine Migration*: A *Virtual Machine* is associated to a *Pod*, this section reviews how internally the VMs are running and how to migrate VMs between nodes.
 * *Network Attachment*: *Virtual Machines* by default are running in the *Pod networking*. For several use cases is required to run the VMs attached to a physical network, this section will demonstrate how to configure *OpenShift* for that purpose.
 * *Migrating Virtual Machines*: In this section several migration from different providers will be performed. Using the operator *Migration Toolkit Virtualization* (*MTV*) migration from *Red Hat Virtualization* and *VMWare vCenter* will be performed. Manual migration from a Libvirt/KVM node will be performed as well.
+* *Architecture*: An explanation behind the MTV operator and the Custom Resources used.
