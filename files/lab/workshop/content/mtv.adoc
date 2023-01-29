@@ -1,7 +1,6 @@
 :scrollbar:
 :toc2:
 
-
 =  Migration Toolkit Virtualization
 
 In this lab, you will install the Operator to perform migration to OpenShift Virtualization.
@@ -67,8 +66,6 @@ Prerequisites for Red Hat Virtualization are described in the following link:htt
 Prerequisites for VMWare are described in the following link:https://access.redhat.com/documentation/en-us/migration_toolkit_for_virtualization/2.3/html/installing_and_using_the_migration_toolkit_for_virtualization/prerequisites#vmware-prerequisites_mtv[link]
 
 
-
-
 == Install and configure the MTV Operator
 
 . Navigate to *Operators* -> *OperatorHub* and filter for `Migration Toolkit for Virtualization`
@@ -119,7 +116,6 @@ $ curl webrhv.dev.cnv.infra.opentlc.com
 ----
 
 .Expected Output
-+
 [%nowrap]
 ----
 Hello from RHV
@@ -202,7 +198,7 @@ image::images/MTV/14_Confirm_Network_Mapping_RHV.png[]
 .. *Name*: `mapping-vmstore00`
 .. *Source provider*: `rhvcnv`
 .. *Target provider*: `host`
-.. *Source networks*: `vmstore00`
+.. *Source storage*: `vmstore00`
 .. *Target storage classes*: `ocs-storagecluster-ceph-rbd (default)`
 . Press *Create* 
 +
@@ -228,7 +224,7 @@ image::images/MTV/18_Migration_Plan_General.png[]
 . On the next step *VM selection* and *Filter* select `All Datacenters`
 + 
 image::images/MTV/19_Migration_Plan_VM_Selection.png[]
-. Fill the field *Filter by VM* with the value `webrhv`and select the VM with your lab ID
+. Fill the field *Filter by VM* with the value `%guid%`and select the VM.
 +
 image::images/MTV/20_Migration_Plan_VM_Select_VM.png[]
 
@@ -255,8 +251,10 @@ image::images/MTV/24_Migration_Plan_Start.png[]
 +
 image::images/MTV/25_Migration_Plan_Completed.png[]
 +
+[IMPORTANT]
+Having many participantes doing the same task in parallel can cause this task would be slowest than in a real environment. Be patient.
 [NOTE]
-You can go back to OpenShift console and check the pods on *Workloads* -> *Pods* meantim the process is running.
+You can go back to OpenShift console and check the pods on *Workloads* -> *Pods* meantime the process is running.
 
 === Review VirtualMachine migrated
 
@@ -390,10 +388,6 @@ spec:
     - type: ConfigChange
 ----
 
-. From the *Actions* drowndown press *Start build*
-+
-image::images/MTV/41_Start_Build.png[]
-
 
 . Return the *Migration Toolkit for Virtualization* portal to add a new provider
 . Navigate in the left menu to *Providers* and press *Add Provider*
@@ -434,7 +428,7 @@ image::images/MTV/48_List_VMWARE_Mapping_Network.png[]
 .. *Name*: `mapping-datastore`
 .. *Source provider*: `vmware`
 .. *Target provider*: `host`
-.. *Source networks*: `WorkloadDatastore`
+.. *Source storage*: `WorkloadDatastore`
 .. *Target namespaces / networks*: `ocs-storagecluster-ceph-rbd (default)`
 . Press *Create*
 +
@@ -485,6 +479,12 @@ image::images/MTV/58_Ready_VMWARE_Plan.png[]
 . After some minutes the migration is completed
 +
 image::images/MTV/59_Completed_VMWARE_Plan.png[]
++
+[IMPORTANT]
+Having many participantes doing the same task in parallel can cause this task would be slowest than in a real environment. Be patient.
++
+[NOTE]
+You can go back to OpenShift console and check the pods on *Workloads* -> *Pods* meantime the process is running.
 
 === Review VirtualMachines migrated
 
