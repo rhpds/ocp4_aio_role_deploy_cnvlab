@@ -70,7 +70,10 @@ Prerequisites for VMWare are described in the following link:https://access.redh
 
 Due to the limitation of the session, the Operator was preinstalled for you. You can navigate to *Operators* -> *Installed Operators* to get the list of the operators installed. Ensure *All projects* are selected to list all of them.
 
-. Click on *Migration Toolkit Virtualization* from the operator installed list.
+image::images/Operators_Installed.png[]
+
+
+. Click on *Migration Toolkit for Virtualization Operator* from the operator installed list.
 
 . Review the *Details* tab
 

@@ -80,6 +80,8 @@ Ignore the "Registration error" message if it appears.
 
 Due to the limitation of the session, the Operator was preinstalled for you. You can navigate to *Operators* -> *Installed Operators* to get the list of the operators installed. Ensure *All projects* are selected to list all of them.
 
+image::images/Operators_Installed.png[]
+
 
 == Examine OpenShift Virtualization Operator
 
