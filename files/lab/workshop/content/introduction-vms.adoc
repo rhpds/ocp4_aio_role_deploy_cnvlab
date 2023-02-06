@@ -90,6 +90,12 @@ image::images/Create_VM_PVC/13_Fedora_Console.png[]
 image::images/Create_VM_PVC/14_Fedora_Console_Show_Password.png[]
 
 . Log in to the VM using the `fedora` user and the indicated password.
++
+[IMPORTANT]
+Unfortunately it is not possible to copy and paste the password to the terminal.
++
+[IMPORTANT]
+The console input is using US keymap. One small trick is to write in the login the password to ensure the characters (specially the `-` is correct).
 
 . After you log in, run the `ip a` command to display the interfaces and IP addresses:
 +

@@ -66,30 +66,13 @@ Prerequisites for Red Hat Virtualization are described in the following link:htt
 Prerequisites for VMWare are described in the following link:https://access.redhat.com/documentation/en-us/migration_toolkit_for_virtualization/2.3/html/installing_and_using_the_migration_toolkit_for_virtualization/prerequisites#vmware-prerequisites_mtv[link]
 
 
-== Install and configure the MTV Operator
+== MTV Operator
 
-. Navigate to *Operators* -> *OperatorHub* and filter for `Migration Toolkit for Virtualization`
-+
-image::images/MTV/01_OperatorHub.png[]
-. Click the tile appeared and press *Install*
-+
-image::images/MTV/02_Operator.png[]
+Due to the limitation of the session, the Operator was preinstalled for you. You can navigate to *Operators* -> *Installed Operators* to get the list of the operators installed. Ensure *All projects* are selected to list all of them.
 
-. Review the _Custom Resources Definition_ which will be created and without modify any option press *Install*
-+
-image::images/MTV/03_Operator_Install.png[]
+. Click on *Migration Toolkit Virtualization* from the operator installed list.
 
-. Like others Operators after the installation is required to create a Controller. Press *Create ForkliftController* for that purpose.
-+
-image::images/MTV/04_Operator_Installed.png[]
-
-. In the next screen press *Create* without modify any value
-+
-image::images/MTV/05_ForkliftController.png[]
-
-. Ensure the `Status` is `Running,Successful`
-+
-image::images/MTV/06_ForkliftController_Status.png[]
+. Review the *Details* tab
 
 
 == Access to the MTV Web
@@ -224,7 +207,7 @@ image::images/MTV/18_Migration_Plan_General.png[]
 . On the next step *VM selection* and *Filter* select `All Datacenters`
 + 
 image::images/MTV/19_Migration_Plan_VM_Selection.png[]
-. Fill the field *Filter by VM* with the value `%guid%`and select the VM.
+. Fill the field *Filter by VM* with the value `%guid%` and select the VM.
 +
 image::images/MTV/20_Migration_Plan_VM_Select_VM.png[]
 
@@ -557,9 +540,12 @@ image::images/MTV/63_VMWARE_VMs_Create_Route.png[]
 . Navigate to the address shown in *Location* field
 +
 image::images/MTV/64_VMWARE_VMs_URL.png[]
++
+[NOTE]
+You can try from another browser or incognito mode to try the load balancing.
 
 
-=== Migrate a VM running on KVM/libvirt
+== Migrate a VM running on KVM/libvirt
 
 The last Virtual Machine to be migrated is a database running in the Hypervisor node.
 

@@ -9,6 +9,7 @@ modules:
     - pods-review
     - network-attachment
     - mtv    
+    - architecture
     - thanks
 
 
