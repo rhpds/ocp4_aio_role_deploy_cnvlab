@@ -25,6 +25,9 @@ objects:
     kind: ImageStream
     metadata:
       name: ${NAME}
+    spec:
+      lookupPolicy:
+        local: true
 
   - apiVersion: build.openshift.io/v1
     kind: BuildConfig
