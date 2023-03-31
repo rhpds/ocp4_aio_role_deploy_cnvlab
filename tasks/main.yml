@@ -44,11 +44,18 @@
 
   - name: Start the build
     shell: |
-       oc -n workbook start-build cnv  --wait=true
+       oc -n workbook start-build cnv 
     register: build_success
-    retries: 10
+
+  - name: Wait for the build to finish
+    shell: |
+      oc -n workbook delete is cnv || true &&
+      oc -n workbook create imagestream cnv &&
+      oc -n workbook wait --for=condition=Complete  build/cnv-1
+    retries: 5
     delay: 30
-    until: build_success is not failed
+    register: build
+    until: build.rc == 0
 
   - name: Configure and deploy the deploy template
     shell: >-
