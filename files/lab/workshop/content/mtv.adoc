@@ -66,16 +66,30 @@ Prerequisites for Red Hat Virtualization are described in the following link:htt
 Prerequisites for VMWare are described in the following link:https://access.redhat.com/documentation/en-us/migration_toolkit_for_virtualization/2.3/html/installing_and_using_the_migration_toolkit_for_virtualization/prerequisites#vmware-prerequisites_mtv[link]
 
 
-== MTV Operator
+== Install and configure the MTV Operator
 
-Due to the limitation of the session, the Operator was preinstalled for you. You can navigate to *Operators* -> *Installed Operators* to get the list of the operators installed. Ensure *All projects* are selected to list all of them.
+. Navigate to *Operators* -> *OperatorHub* and filter for `Migration Toolkit for Virtualization`
++
+image::images/MTV/01_OperatorHub.png[]
+. Click the tile appeared and press *Install*
++
+image::images/MTV/02_Operator.png[]
 
-image::images/Operators_Installed.png[]
+. Review the _Custom Resources Definition_ which will be created and without modify any option press *Install*
++
+image::images/MTV/03_Operator_Install.png[]
 
+. Like others Operators after the installation is required to create a Controller. Press *Create ForkliftController* for that purpose.
++
+image::images/MTV/04_Operator_Installed.png[]
 
-. Click on *Migration Toolkit for Virtualization Operator* from the operator installed list.
+. In the next screen press *Create* without modify any value
++
+image::images/MTV/05_ForkliftController.png[]
 
-. Review the *Details* tab
+. Ensure the `Status` is `Running,Successful`
++
+image::images/MTV/06_ForkliftController_Status.png[]
 
 
 == Access to the MTV Web
