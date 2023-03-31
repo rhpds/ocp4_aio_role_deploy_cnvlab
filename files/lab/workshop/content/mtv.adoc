@@ -135,7 +135,7 @@ image::images/MTV/10_Provider_Add.png[]
 .. *Name*: `rhvcnv`
 .. *RHV Manager host name or IP address*: `rhvm.dev.cnv.infra.opentlc.com`
 .. *RHV Manager user name*: `migtoocpvirt@internal`
-.. *RHV Manager password*: `P@ssw0rd1!`
+.. *RHV Manager password*: `%rhv_password%`
 .. *CA certificate*: 
 +
 [%nowrap]
@@ -395,7 +395,7 @@ spec:
 .. *Name*: `vmware`
 .. *vCenter host name or IP address*: `portal.vc.opentlc.com`
 .. *vCenter user name*: `migtoocpvirt@vc.opentlc.com`
-.. *vCenter password*: `R3dh4t1!`
+.. *vCenter password*: `%vcenter_password%`
 .. *VDDK init image*: `image-registry.openshift-image-registry.svc:5000/vmexamples/vddk:latest`
 . Press *Verify certificate*
 +
