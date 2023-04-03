@@ -60,7 +60,7 @@
   - name: Configure and deploy the deploy template
     shell: >-
       oc -n workbook process
-      -f /root/cnvlab/files/lab/deploy-template.yaml -p NAME=cnv -p IMAGE_STREAM_NAME=cnv -p WORKSHOP_VARS="{\"guid\": \"{{ guid }}\", \"password\": \"{{ hostvars['hypervisor']['student_password'] }}\", \"ocp_url\": \"https://console-openshift-console.apps.{{ guid }}.{{ cluster_dns_zone }}\"}"
+      -f /root/cnvlab/files/lab/deploy-template.yaml -P ROUTEHOST=lab-instructions.apps.{{ guid }}.{{ cluster_dns_zone }} -p NAME=cnv -p IMAGE_STREAM_NAME=cnv -p WORKSHOP_VARS="{\"guid\": \"{{ guid }}\", \"password\": \"{{ hostvars['hypervisor']['student_password'] }}\", \"ocp_url\": \"https://console-openshift-console.apps.{{ guid }}.{{ cluster_dns_zone }}\"}"
       | oc -n workbook apply -f -
     register: deploy_success
     retries: 3
