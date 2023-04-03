@@ -52,7 +52,7 @@
 
   - name: Wait for the build to finish
     shell: |
-      oc annotate is cnv test="$(date)" &&
+      oc -n workbook annotate is cnv test="$(date)" &&
       oc -n workbook wait --for=condition=Complete  build/cnv-1 
     retries: 5
     delay: 30
