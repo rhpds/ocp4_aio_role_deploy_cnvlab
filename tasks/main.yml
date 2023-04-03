@@ -52,9 +52,8 @@
 
   - name: Wait for the build to finish
     shell: |
-      oc -n workbook wait --for=condition=Complete  build/cnv-1 ||
-      (oc -n workbook delete is cnv &&
-      oc -n workbook create imagestream cnv)
+      oc annotate is cnv test="$(date)" &&
+      oc -n workbook wait --for=condition=Complete  build/cnv-1 
     retries: 5
     delay: 30
     register: build
