@@ -33,6 +33,9 @@
 
 - name: Deploy Workbook Instance for CNV Labs
   block:
+  - name: Create image stream
+    shell: oc -n workbook create imagestream cnv
+
   - name: Configure and apply build template
     shell: >-
       oc -n workbook process
@@ -49,9 +52,9 @@
 
   - name: Wait for the build to finish
     shell: |
-      oc -n workbook delete is cnv || true &&
-      oc -n workbook create imagestream cnv &&
-      oc -n workbook wait --for=condition=Complete  build/cnv-1
+      oc -n workbook wait --for=condition=Complete  build/cnv-1 ||
+      (oc -n workbook delete is cnv &&
+      oc -n workbook create imagestream cnv)
     retries: 5
     delay: 30
     register: build
