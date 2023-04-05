@@ -133,7 +133,7 @@ image::images/MTV/10_Provider_Add.png[]
 . Select *Red Hat virtualization* and fill with the following information
 +
 .. *Name*: `rhvcnv`
-.. *RHV Manager host name or IP address*: `rhvm.dev.cnv.infra.opentlc.com`
+.. *RHV Manager host name or IP address*: `rhvm.cnv.infra.opentlc.com`
 .. *RHV Manager user name*: `migtoocpvirt@internal`
 .. *RHV Manager password*: `%rhv_password%`
 .. *CA certificate*: 
@@ -141,30 +141,29 @@ image::images/MTV/10_Provider_Add.png[]
 [%nowrap]
 ----
 -----BEGIN CERTIFICATE-----
-MIIEDjCCAvagAwIBAgICEAAwDQYJKoZIhvcNAQELBQAwYDELMAkGA1UEBhMCVVMxIjAgBgNVBAoM
-GWRldi5jbnYuaW5mcmEub3BlbnRsYy5jb20xLTArBgNVBAMMJHJodm0uZGV2LmNudi5pbmZyYS5v
-cGVudGxjLmNvbS4yNjgyOTAeFw0yMjAyMDEyMDAyMjBaFw0zMjAxMzEyMDAyMjBaMGAxCzAJBgNV
-BAYTAlVTMSIwIAYDVQQKDBlkZXYuY252LmluZnJhLm9wZW50bGMuY29tMS0wKwYDVQQDDCRyaHZt
-LmRldi5jbnYuaW5mcmEub3BlbnRsYy5jb20uMjY4MjkwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
-ggEKAoIBAQCiOw7p82ufC3MUrNtEDnmFf+FcuMYDTT5Ayn9/9JXjNHkKXyGpwFVBLBRY+lW1pa3C
-b9xDp6aKEyygquURc5e1MCbx8MMxLDFaN+BraKTK3eLPjShA8+wP+jBF+LIT2K5NljfuhBg4TbPM
-Fx4458zYn5HU9ipVDltNIJT3Y1vYnem7AE0+XMdBFOO74yViEQv0QfJZYl69VkYHbTrSKxErc7Za
-/JAm+4GwpNMr92LZ28bvBBFG4sTwMjDqR6zXilT84Z4FYipksoz1vstQfg3HUTXPQZH67WEqFkgb
-FqnnjP/GAI+ZGzGxNIczgN1G6ZAIEU0ytI4BpfCsE8bTo/r/AgMBAAGjgdEwgc4wHQYDVR0OBBYE
-FFs6/HKPNCBxQBwoZBdEns3dKgo7MIGLBgNVHSMEgYMwgYCAFFs6/HKPNCBxQBwoZBdEns3dKgo7
-oWSkYjBgMQswCQYDVQQGEwJVUzEiMCAGA1UECgwZZGV2LmNudi5pbmZyYS5vcGVudGxjLmNvbTEt
-MCsGA1UEAwwkcmh2bS5kZXYuY252LmluZnJhLm9wZW50bGMuY29tLjI2ODI5ggIQADAPBgNVHRMB
-Af8EBTADAQH/MA4GA1UdDwEB/wQEAwIBBjANBgkqhkiG9w0BAQsFAAOCAQEATncroy0oP88IeReU
-jqF1kOy2N7Vv0XkUdcp+5RUDkffmsXakuXbMXGm/bLo2+AjeW7ckz2whF5DnfBHXuE5JWGUayYfm
-kVCKB+rdX1QXbyvfr2lXfIWg9CCyYsCyMcGyRtaQJQVhLYSa3fzEAG0fYKgc6oPVymhK5TB6g4yK
-mrSAy4+wr9kZFNsmfyhEDnmfHmTBqVnXk4z93HsbMk7AkddQhDb7pj1pMDZMCjYAL2eFPbF65U4e
-KJXAzVdYNgf7yNIvrhgUGOG9Wi0Cqcrb5ORiBPHpaqyoZZO6pXQmVH0LJWMa0Dxkywzfmsl4V86U
-9tvOe7nIzflfRvhXMegrrw==
+MIID9DCCAtygAwIBAgICEAAwDQYJKoZIhvcNAQELBQAwWDELMAkGA1UEBhMCVVMxHjAcBgNVBAoM
+FWNudi5pbmZyYS5vcGVudGxjLmNvbTEpMCcGA1UEAwwgcmh2bS5jbnYuaW5mcmEub3BlbnRsYy5j
+b20uMjk5NTYwHhcNMjMwMzAxMjA0OTUwWhcNNDMwMjI1MjA0OTUwWjBYMQswCQYDVQQGEwJVUzEe
+MBwGA1UECgwVY252LmluZnJhLm9wZW50bGMuY29tMSkwJwYDVQQDDCByaHZtLmNudi5pbmZyYS5v
+cGVudGxjLmNvbS4yOTk1NjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKnqGGFwAWYt
+LY1BjayiZnMenzKt369B0yhK5zuoX8fFdJC+X3nwGN8MmpshpFdMK8WGiyM9BjL1t4/UhlTsnEB5
+YcPyyvAfjT4a5adGPdN0iEI8VBtn2eGuOpSdyPJmv33Ef+IaS7oCcYKZPiOztSn+Rzy8SncrAGa5
++nhXN/6rTvTc2vTv+UMTK6ozIYZg5aEcengOtS8u2fTIDNeMBZIqcH0CHu5phuGtkPdUtx9+/m2t
+bnBWCwa9iIeGukNNNpdsS/KCzJLh/qRu3tcNaURcp6E2RSNh37+Z1A+/gxW+/YrvHy9eDY/V8M/u
+ZNAlLuakwqXTRkEsKrND0q61+fECAwEAAaOBxzCBxDAdBgNVHQ4EFgQU6cXhwojVLqRZnpb6jND7
+J4PBe2MwgYEGA1UdIwR6MHiAFOnF4cKI1S6kWZ6W+ozQ+yeDwXtjoVykWjBYMQswCQYDVQQGEwJV
+UzEeMBwGA1UECgwVY252LmluZnJhLm9wZW50bGMuY29tMSkwJwYDVQQDDCByaHZtLmNudi5pbmZy
+YS5vcGVudGxjLmNvbS4yOTk1NoICEAAwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAQYw
+DQYJKoZIhvcNAQELBQADggEBADP+YTXYVGOx2mOQkmmFBkRM0i9mxD3pLxWXCCrhcOUi6c45Z8pi
+NUmFjJTc6+/TjcqLMdeuUvybw48D1NGlwQhLSUgKXyt373lclb5gcankCSmq+lf5Sx0O9vx3VNkM
+q0YekoEE8BGrFDmGlQnCCDA1LFL86XcBr4dgEsOcmhI++ytz6lCdPSEJ+FKukKT9KEucwxb3SKyg
+k9XCB/QWKbJxRkr6NvyDqPir1m9/CMy210Ct6RWPKIZVDJXxmrjT+TnZU0idv2XK8P4Tn60kJPHr
+317nu4QbnejU9CukFdug4ti6y2zKahjxaZuSqibRVq2Njup0oQmOg0glyoefnFg=
 -----END CERTIFICATE-----
 ----
 
 [INFO]
-CA certificate content is from link:https://rhvm.dev.cnv.infra.opentlc.com/ovirt-engine/services/pki-resource?resource=ca-certificate&format=X509-PEM-CA[https://rhvm.dev.cnv.infra.opentlc.com/ovirt-engine/services/pki-resource?resource=ca-certificate&format=X509-PEM-CA]
+CA certificate content is from link:https://rhvm.cnv.infra.opentlc.com/ovirt-engine/services/pki-resource?resource=ca-certificate&format=X509-PEM-CA[https://rhvm.cnv.infra.opentlc.com/ovirt-engine/services/pki-resource?resource=ca-certificate&format=X509-PEM-CA]
 
 . Ensure the provider is on status `Ready`
 +
@@ -178,10 +177,10 @@ After the provider is added, it is needed to map the RHV networks and RHV datast
 +
 image::images/MTV/12_Network_Mapping.png[]
 . Fill the following information
-.. *Name*: `mapping-ovirtmgmt`
+.. *Name*: `mapping-public`
 .. *Source provider*: `rhvcnv`
 .. *Target provider*: `host`
-.. *Source networks*: `ovirtmgmt`
+.. *Source networks*: `Public`
 .. *Target namespaces / networks*: `Pod network (default)`
 . Press *Create* 
 +
@@ -228,7 +227,7 @@ image::images/MTV/19_Migration_Plan_VM_Selection.png[]
 +
 image::images/MTV/20_Migration_Plan_VM_Select_VM.png[]
 
-. Press *Next* and select the network mapping `mapping-ovirtmgmt`
+. Press *Next* and select the network mapping `mapping-public`
 +
 image::images/MTV/21_Migration_Plan_VM_Select_Network.png[]
 
