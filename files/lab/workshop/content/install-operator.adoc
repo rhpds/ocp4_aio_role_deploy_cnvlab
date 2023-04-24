@@ -76,16 +76,60 @@ image::images/Install/Worker0_BMhost.png[]
 Ignore the "Registration error" message if it appears.
 
 
-== Review Operator
+== Install Operator
 
-Due to the limitation of the session, the Operator was preinstalled for you. You can navigate to *Operators* -> *Installed Operators* to get the list of the operators installed. Ensure *All projects* are selected to list all of them.
+In this section, you install an Operator from the *OperatorHub* page. You manage Operators from the Administrator perspective in the web console.
 
-image::images/Operators_Installed.png[]
+. From the navigation menu, select *Operators* -> *OperatorHub*:
++
+image::images/Install/01_OperatorHub_Menu.png[]
+
+. Explore the *OperatorHub* page and note that all of the currently available Operators are displayed:
++
+image::images/Install/02_OperatorHub_Dashboard.png[]
++
+The dashboard lists the Operators that can be installed and various ways to filter the list.
+
+. In the *Filter by keyword...* field, type `OpenShift Virtualization` and select the OpenShift Virtualization tile:
++
+image::images/Install/03_OperatorHub_Search.png[]
++
+You can also filter by category, installation state, provider, provider type, capability level, or infrastructure features.
+
+. Click *Install*:
++
+image::images/Install/04_OperatorHub_Install.png[]
+
+. On the *Install Operator* wizard page that opens with the default options selected, click  *Install*:
++
+image::images/Install/05_OperatorHub_Install_Wizard.png[]
++
+The wizard allows you to specify the update channel, the installation mode, the installed Namespace, and the update approval strategy options.
++
+As the installation progresses, the status is shown.
+
+. When the installation is complete, click *Create HyperConverged* to create the required custom resource:
++
+image::images/Install/06_OperatorHub_Install_Progress.png[]
+
+. Review the *Create HyperConverged* wizard options:
++
+image::images/Install/08_Create_HyperConverged.png[]
+
+. You can review the available options. Without changing the default values, scroll down and click *Create* to open the *OpenShift Virtualization Deployment* tab for the OpenShift Virtualization Operator:
++
+image::images/Install/09_Hyperconverged_Tab.png[]
+
+. Refresh the web console when the popup appears
++
+image::images/Refresh_UI.png[]
+
+. Watch the *Status* column until the status changes to `Available`:
++
+image::images/Install/10_Hyperconverged_Available.png[]
 
 
 == Examine OpenShift Virtualization Operator
-
-. Click on *OpenShift Virtualization* from the operator installed list.
 
 . Click the *Details* tab to view information about the Operator:
 +
