@@ -78,6 +78,9 @@ image::images/MTV/02_Operator.png[]
 . Review the _Custom Resources Definition_ which will be created and without modify any option press *Install*
 +
 image::images/MTV/03_Operator_Install.png[]
++
+[IMPORTANT]
+Select version `release-v2.3`
 
 . Like others Operators after the installation is required to create a Controller. Press *Create ForkliftController* for that purpose.
 +
