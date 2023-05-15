@@ -115,7 +115,7 @@ A webserver VM is running in `Red Hat Virtualization` as a standalone webserver.
 
 [%nowrap]
 ----
-$ curl webrhv.dev.cnv.infra.opentlc.com
+$ curl webrhv.cnv.infra.opentlc.com
 ----
 
 .Expected Output
