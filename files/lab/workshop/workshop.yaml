@@ -8,6 +8,7 @@ modules:
     - introduction-customization
     - pods-review
     - network-attachment
+    - storage-management
     - mtv    
     - architecture
     - thanks
