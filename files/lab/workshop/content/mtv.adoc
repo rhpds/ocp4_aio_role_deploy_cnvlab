@@ -563,7 +563,7 @@ image::images/MTV/93_MTV_Create_Provider.png[]
 .. *Name*: `rhosp`
 .. *OpenStack Identity server URL*: `https://api.osp01.prod.dal10.ibm.infra.opentlc.com:13000/v3`
 .. *OpenStack username*: `migtoocpvirt`
-.. *OpenStack password*: `%ocp_password%`
+.. *OpenStack password*: `%osp_password%`
 .. *Domain*: `Default`
 .. *Project*: `migtoocpvirt`
 .. *Region*: `regionOne`
