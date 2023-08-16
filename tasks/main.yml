@@ -28,7 +28,7 @@
  
 - name: Clone OpenShift virt repositories
   git:
-    repo: "https://github.com/agonzalezrh/ocp4_aio_role_deploy_cnvlab.git"
+    repo: "https://github.com/rhpds/ocp4_aio_role_deploy_cnvlab.git"
     dest: "/root/cnvlab"
 
 - name: Deploy Workbook Instance for CNV Labs
