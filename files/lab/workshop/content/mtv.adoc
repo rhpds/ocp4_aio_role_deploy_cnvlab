@@ -549,6 +549,7 @@ image::images/MTV/64_VMWARE_VMs_URL.png[]
 [NOTE]
 You can try from another browser or incognito mode to try the load balancing.
 
+== Migrating from Red Hat OpenStack Platform Provider
 
 === Add Red Hat OpenStack Platform Provider
 
