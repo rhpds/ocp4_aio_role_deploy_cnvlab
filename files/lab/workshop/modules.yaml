@@ -28,7 +28,10 @@ modules:
         exit_sign: Network Attachment
     network-attachment:
         name: Network Attachment
-        exit_sign: Migrating Virtual Machines
+        exit_sign: Storage Management
+    storage-management:
+        name: Storage Management
+        exit_sign: Migrating Virtual Machines    
     mtv:
         name: Migrating Virtual Machines
         exit_sign: MTV Architecture

@@ -28,7 +28,7 @@
  
 - name: Clone OpenShift virt repositories
   git:
-    repo: "https://github.com/agonzalezrh/ocp4_aio_role_deploy_cnvlab.git"
+    repo: "https://github.com/rhpds/ocp4_aio_role_deploy_cnvlab.git"
     dest: "/root/cnvlab"
 
 - name: Deploy Workbook Instance for CNV Labs
@@ -62,7 +62,7 @@
   - name: Configure and deploy the deploy template
     shell: >-
       oc -n workbook process
-      -f /root/cnvlab/files/lab/deploy-template.yaml -p ROUTEHOST=lab-instructions.apps.{{ guid }}.{{ cluster_dns_zone }} -p NAME=cnv -p IMAGE_STREAM_NAME=cnv -p WORKSHOP_VARS="{\"rhv_password\": \"{{ mig_rhv_password }}\", \"vcenter_password\": \"{{ mig_vcenter_password }}\", \"guid\": \"{{ guid }}\", \"password\": \"{{ hostvars['hypervisor']['student_password'] }}\", \"ocp_url\": \"https://console-openshift-console.apps.{{ guid }}.{{ cluster_dns_zone }}\"}"
+      -f /root/cnvlab/files/lab/deploy-template.yaml -p ROUTEHOST=lab-instructions.apps.{{ guid }}.{{ cluster_dns_zone }} -p NAME=cnv -p IMAGE_STREAM_NAME=cnv -p WORKSHOP_VARS="{\"osp_password\": \"{{ mig_osp_password }}\", \"rhv_password\": \"{{ mig_rhv_password }}\", \"vcenter_password\": \"{{ mig_vcenter_password }}\", \"guid\": \"{{ guid }}\", \"password\": \"{{ hostvars['hypervisor']['student_password'] }}\", \"ocp_url\": \"https://console-openshift-console.apps.{{ guid }}.{{ cluster_dns_zone }}\"}"
       | oc -n workbook apply -f -
     register: deploy_success
     retries: 3
