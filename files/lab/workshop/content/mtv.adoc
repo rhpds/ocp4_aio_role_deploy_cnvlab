@@ -386,7 +386,7 @@ image::images/MTV/93_MTV_Create_Provider.png[]
 .. *vCenter password*: `%vcenter_password%`
 .. *VDDK init image*: `image-registry.openshift-image-registry.svc:5000/vmexamples/vddk:latest`
 .. Check `Skip certificate validation (if checked, the provider's certificate won't be validated)`
-.. *SHA-1 fingerprint*: `70:2D:52:D2:D1:A5:A2:75:58:8F:3D:07:D5:7E:E9:73:81:BC:88:A2`
+.. *SHA-1 fingerprint*: `C7:BF:C2:DD:CD:73:1C:22:DC:D1:5A:DD:EA:64:21:C1:97:FB:F0:9C`
 +
 image::images/MTV/94_MTV_Fill_Dialog.png[]
 .  Press *Create* and wait till the *Status* column is changed to `Ready`
