@@ -110,7 +110,7 @@ image::images/Networking/14_Status_NNCP.png[]
 In order to use the Linux Bridge with your VM you need to create a *Network Attachment Definition*. This is what tells OpenShift about the network and allows the virtual machines to connect to it. Network Attachment Definitions are specific to the project/namespace they're created in, unless they're created in the `default` project. This gives you, the administrator, the ability to control which networks are and aren't available to users who have access to manage their own Vms. Once the Network Attachment Definition has been created, it can then be used by virtual machines when configuring their network adapters.
 
 [NOTE]
-Due to time constraints, the host network has already been configured in this lab. If you want to learn more about the host networking, along with how to view and manage the configuration, please use the NMState documentation found https://docs.openshift.com/container-platform/4.13/networking/k8s_nmstate/k8s-nmstate-observing-node-network-state.html[here].
+Due to time constraints, the host network has already been configured in this lab. If you want to learn more about the host networking, along with how to view and manage the configuration, please use the NMState documentation found https://docs.openshift.com/container-platform/4.13/networking/k8s_nmstate/k8s-nmstate-about-the-k8s-nmstate-operator.html[here].
 
 . Navigate to *Networking* -> *Network Attachment Definitions* and click *Create network attachment definition*:
 +
